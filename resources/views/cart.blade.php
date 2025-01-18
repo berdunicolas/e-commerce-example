@@ -120,7 +120,7 @@
             </li>
           </ul>
           <button class="btn btn-dark mt-2" type="button">Ir a pagar</button>
-          <button type="button" class="btn btn-light border mt-2">Volver a la tienda</button>
+          <a href="/store" class="btn btn-light border mt-2">Volver a la tienda</a>
         </div>
       </div>
     </div>
@@ -129,7 +129,7 @@
   <script>
     // LOS DATOS DE LOS ITEMS DEBEN VENIR DEL BACKEND Y SE DEBE RENDERIZAR LA TABLA DESDE EL FRONT
     // SE DEBE DAR UN ESTIMADO DEL TOTAL EN EL FRONTEND Y VALIDAR EL MISMO CALCULO EN EL BACKEND
-
+    
     Object.prototype.table = function () {
       console.table(this);
     }
