@@ -20,8 +20,17 @@
             rel="stylesheet"
         />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <style>
+            html {
+                height: 100%
+            }
+            body {
+                height: 100%;
+            }
+        </style>
     </head>
-    <body class="bg-light" style="font-family: 'Gothic A1' !important; font-weight: 300;">
+    <body class="bg-light d-flex flex-column" style="font-family: 'Gothic A1' !important; font-weight: 300;">
         {{ $slot }}
     </body>
 </html>

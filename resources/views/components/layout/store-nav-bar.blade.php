@@ -1,9 +1,9 @@
 <nav class="navbar bg-warning">
     <div class="container-lg mt-2">
       <a class="navbar-brand" href="/store">
-        <h3 class="display3 mb-0">
+        <h6 class="display-6 mb-0">
           .logotipo
-        </h3>
+        </h6>
       </a>
 <!--
       <button type="button" class="btn border-2 position-relative ">

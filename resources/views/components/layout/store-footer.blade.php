@@ -1,8 +1,8 @@
-<div class="container-fluid bg-warning pt-5" style=" height: 400px ">
+<div class="container-fluid bg-warning pt-5 mt-auto" style=" height: 300px ">
     <div class="d-flex flex-column justify-content-between container-lg h-100">
 
       <div>
-        <h1 class="display1">
+        <h1 class="display-1">
           .logotipo
         </h1>
       </div>
