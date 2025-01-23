@@ -2,9 +2,13 @@
 
 namespace App\Providers;
 
+use App\View\Components\FullLogo;
 use App\View\Components\Layout\Store;
 use App\View\Components\Layout\StoreFooter;
 use App\View\Components\Layout\StoreNavBar;
+use App\View\Components\Logo;
+use App\View\Components\NavBar;
+use App\View\Components\ProductNameLogo;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,5 +30,9 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('store-layout', Store::class);
         Blade::component('store-navbar', StoreNavBar::class);
         Blade::component('store-footer', StoreFooter::class);
+        Blade::component('logo', Logo::class);
+        Blade::component('full-logo', FullLogo::class);
+        Blade::component('product-name-logo', ProductNameLogo::class);
+        Blade::component('nav-bar', NavBar::class);
     }
 }
