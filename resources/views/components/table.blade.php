@@ -28,26 +28,27 @@
 
 <script>
     const tableBody = document.getElementById('table-body');
-    const csrf = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-    alert(csrf);
-/*
-    fetch('/api/categories')
-        .then(response => response.json())
-        .then(data => {
-            tableBody.innerHTML = '';
-            data.forEach(category => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${category.id}</td>
-                    <td>${category.name}</td>
-                    <td>${category.description}</td>
-                `;
-                tableBody.appendChild(tr);
-            });
-        })
-        .catch(error => console.error(error));*/
+    fetch('/api/categories', {
+        method: 'GET',
+        credentials: 'include',
+    })
+    .then(response => response.json())
+    .then(data => {
+        tableBody.innerHTML = '';
+        data.forEach(category => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${category.id}</td>
+                <td>${category.name}</td>
+                <td>${category.description}</td>
+                <td>
+                    <a href="${category.url_item}/edit" class="btn btn-sm btn-warning">Editar</a>
+                    <button class="btn btn-sm btn-danger" onclick="deleteCategory(${category.url_item})">Eliminar</button>
+                </td>
+            `;
+            tableBody.appendChild(tr);
+        });
+    });
+
 </script>
-
-
-

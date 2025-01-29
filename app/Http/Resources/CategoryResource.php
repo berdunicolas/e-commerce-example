@@ -18,7 +18,7 @@ class CategoryResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'description' => $this->description,
-            'delete_link' => route('categories.destroy', $this->id),
+            'url_item' => route('categories.show', $this->id),
         ];
     }
 }
