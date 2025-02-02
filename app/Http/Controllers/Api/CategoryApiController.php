@@ -7,7 +7,10 @@ use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Http\Resources\CategoryResource;
+use Exception;
 use Illuminate\Http\Response;
+
+use function Laravel\Prompts\text;
 
 class CategoryApiController extends Controller
 {
@@ -24,7 +27,18 @@ class CategoryApiController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        try{
+            Category::create($validated);
+
+            return response()->json(['message' => 'Category created'], Response::HTTP_CREATED);
+        }catch(\Exception $e){
+            if(config('app.debug')){
+                return response()->json(['message' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+            }
+            return response()->json(['message' => 'Error creating category'], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
     }
 
     /**
@@ -48,6 +62,6 @@ class CategoryApiController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
     }
 }

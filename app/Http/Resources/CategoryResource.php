@@ -19,6 +19,7 @@ class CategoryResource extends JsonResource
             'name' => $this->name,
             'description' => $this->description,
             'url_item' => route('categories.show', $this->id),
+            'api_url_item' => route('api.categories.show', $this->id),
         ];
     }
 }
