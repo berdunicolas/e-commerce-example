@@ -9,3 +9,5 @@
 - Corregir popovers
 - Validaciones de formularios
 - Refactorizar FETCH en js
+- Refactorizar tables o cambiar por datatables
+- Dark mode urgente
