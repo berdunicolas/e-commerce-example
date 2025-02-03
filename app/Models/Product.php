@@ -22,6 +22,10 @@ class Product extends Model
         'stock_alert_threshold',
     ];
 
+    protected $attributes = [
+        'description' => '',
+    ];
+
     public function category()
     {
         return $this->belongsTo(Category::class);

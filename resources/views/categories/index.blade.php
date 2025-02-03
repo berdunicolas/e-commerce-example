@@ -5,7 +5,7 @@
         </header>
         <div class="d-flex">
             <button type="button" class="btn btn-light btn-lg rounded-1 font-size-1 font-bold my-2 ms-auto" data-bs-toggle="modal" data-bs-target="#create-category-modal">
-                Nueva categoria  <i class="bi bi-plus-square"></i>
+                Nueva categoria  <i class="bi bi-plus-lg font-size-2"></i>
             </button>
         </div>
         <x-table :columns="['Id', 'Nombre', 'Descripción', 'Acción']" />

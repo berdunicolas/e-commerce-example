@@ -13,6 +13,7 @@ class Table extends Component
      */
     public function __construct(
         public ?array $columns = null,
+        public string $tableJS = 'table.js',
     ) {}
 
     /**

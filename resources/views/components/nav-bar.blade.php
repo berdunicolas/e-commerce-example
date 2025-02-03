@@ -20,7 +20,7 @@
             </a>
             <ul class="font-size-1">
                 <ui class="nav-subordinate">
-                    <a href="{{route('categories.index')}}" class="nav-link text-dark btn btn-light rounded-0">
+                    <a href="{{route('products.index')}}" class="nav-link text-dark btn btn-light rounded-0">
                         Productos
                     </a>
                 </ui>

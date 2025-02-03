@@ -21,8 +21,8 @@
         </table>
     @endif
 </div>
-
-<script src="{{ Vite::asset('resources/js/table.js')}}" type="module"></script>
+{{-- table.js' --}}
+<script src="{{ Vite::asset('resources/js/' . $tableJS)}}" type="module"></script>
 <script>
     tableColspan = {{count($columns)}};
 </script>

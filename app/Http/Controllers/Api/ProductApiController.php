@@ -3,33 +3,31 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
-use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Requests\UpdateCategoryRequest;
-use App\Http\Resources\CategoryResource;
+use App\Http\Requests\StoreProductsRequest;
+use App\Http\Requests\UpdateProductsRequest;
+use App\Http\Resources\ProductResource;
+use App\Models\Product;
 use Illuminate\Http\Response;
 
-use function Laravel\Prompts\text;
-
-class CategoryApiController extends Controller
+class ProductApiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return response()->json(CategoryResource::collection(Category::all()), Response::HTTP_OK);
+        return response()->json(ProductResource::collection(Product::all()), Response::HTTP_OK);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCategoryRequest $request)
+    public function store(StoreProductsRequest $request)
     {
         $validated = $request->validated();
 
         try{
-            Category::create($validated);
+            Product::create($validated);
 
             return response()->json(['message' => 'Category created'], Response::HTTP_CREATED);
         }catch(\Exception $e){
@@ -43,7 +41,7 @@ class CategoryApiController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show(string $id)
     {
         //
     }
@@ -51,7 +49,7 @@ class CategoryApiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update(UpdateProductsRequest $request, string $id)
     {
         //
     }
@@ -59,8 +57,8 @@ class CategoryApiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy(Product $product)
     {
-        $category->delete();
+        $product->delete();
     }
 }

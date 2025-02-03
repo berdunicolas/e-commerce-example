@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
-    Route::resource('categories', CategoryController::class)->only(['index', 'create', 'edit', 'show']);
+    Route::resource('categories', CategoryController::class)->only(['index', 'show']);
+    Route::resource('products', ProductController::class)->only(['index', 'show']);
 });
 
 
