@@ -41,6 +41,11 @@ window.updateTable = function () {
             tableBody.innerHTML = '';
 
             data.forEach(product => {
+                let stock_status = `<i class="bi bi-check-circle text-success font-size-2"></i>`;
+                if(product.stock <= product.stock_alert){
+                    stock_status = `<i class="bi bi-exclamation-triangle text-warning font-size-2"></i>`;
+                }
+
                 const tr = document.createElement('tr');
 
                 tr.innerHTML = `
@@ -48,8 +53,8 @@ window.updateTable = function () {
                     <td>${product.name}</td>
                     <td>${product.description}</td>
                     <td>$${product.price}</td>
-                    <td>${product.stock}${product.unit}</td>
-                    <td>${product.category.name}</td>
+                    <td>${product.stock}${product.unit} ${stock_status}</td>
+                    <td>${(product.category) ? product.category.name : ''}</td>
                     <td>
                         <button href="${product.url_item}/edit" class="btn btn-light btn-sm"
                             data-bs-toggle="popover"

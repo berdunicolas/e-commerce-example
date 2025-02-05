@@ -23,7 +23,15 @@ class StoreCategoryRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:50|unique:categories',
-            'description' => 'string|max:255'
+            'description' => 'nullable|string|max:255'
         ];
+    }
+
+
+    public function validated($key = null, $default = null)
+    {
+        $validated = parent::validated();
+        $validated['description'] = $validated['description'] ?? '';
+        return $validated;        
     }
 }

@@ -32,4 +32,11 @@ class StoreProductsRequest extends FormRequest
             'stock_alert_threshold' => ['required', 'numeric', 'between:0,99999999.99'],
         ];
     }
+
+    public function validated($key = null, $default = null)
+    {
+        $validated = parent::validated();
+        $validated['description'] = $validated['description'] ?? '';
+        return $validated;        
+    }
 }

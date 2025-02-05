@@ -21,6 +21,7 @@ class ProductResource extends JsonResource
             'price' => $this->price,
             'stock' => $this->stock,
             'unit' => $this->unit,
+            'stock_alert' => $this->stock_alert_threshold,
             'category' => new CategoryResource($this->category),
             'url_item' => route('products.show', $this->id),
             'api_url_item' => route('api.products.show', $this->id),
