@@ -9,6 +9,7 @@ use App\View\Components\Layout\StoreNavBar;
 use App\View\Components\Logo;
 use App\View\Components\NavBar;
 use App\View\Components\ProductNameLogo;
+use App\View\Components\Table;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -34,5 +35,6 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('full-logo', FullLogo::class);
         Blade::component('product-name-logo', ProductNameLogo::class);
         Blade::component('nav-bar', NavBar::class);
+        Blade::component('table', Table::class);
     }
 }
