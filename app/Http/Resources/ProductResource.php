@@ -25,6 +25,7 @@ class ProductResource extends JsonResource
             'category' => new CategoryResource($this->category),
             'url_item' => route('products.show', $this->id),
             'api_url_item' => route('api.products.show', $this->id),
+            'image_url' => $this->getMediaUrl(),
         ];
     }
 }

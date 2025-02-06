@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use App\Traits\HasMedia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
     /** @use HasFactory<\Database\Factories\ProductFactory> */
-    use HasFactory;
+    use HasFactory, HasMedia;
+
+    protected bool $allowsMultipleMedia = false;
 
     protected $fillable = [
         'code',
@@ -20,10 +23,6 @@ class Product extends Model
         'discount',
         'category_id',
         'stock_alert_threshold',
-    ];
-
-    protected $attributes = [
-        'description' => '',
     ];
 
     public function category()

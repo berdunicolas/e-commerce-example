@@ -21,7 +21,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::resource('categories', CategoryController::class)->only(['index', 'show']);
-    Route::resource('products', ProductController::class)->only(['index', 'show']);
+    Route::resource('products', ProductController::class)->only(['index', 'show', 'store']);
 });
 
 

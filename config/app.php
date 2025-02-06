@@ -123,4 +123,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'filesystem_disk' => env('FILESYSTEM_DISK', 'local'),
+
 ];

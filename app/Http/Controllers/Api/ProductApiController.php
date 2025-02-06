@@ -26,15 +26,17 @@ class ProductApiController extends Controller
     {
         $validated = $request->validated();
 
-        try{
-            Product::create($validated);
+        try {
+            $product = Product::create($validated);
+            $product->addMedia($request->file('image'));
 
-            return response()->json(['message' => 'Category created'], Response::HTTP_CREATED);
-        }catch(\Exception $e){
-            if(config('app.debug')){
+
+            return response()->json(['message' => 'Product created'], Response::HTTP_CREATED);
+        } catch (\Exception $e) {
+            if (config('app.debug')) {
                 return response()->json(['message' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
             }
-            return response()->json(['message' => 'Error creating category'], Response::HTTP_INTERNAL_SERVER_ERROR);
+            return response()->json(['message' => 'Error creating product'], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -59,6 +61,15 @@ class ProductApiController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
+        try {
+            $product->deleteMedia();
+            $product->delete();
+            return response()->noContent(Response::HTTP_OK);
+        } catch (\Exception $e) {
+            if (config('app.debug')) {
+                return response()->json(['message' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+            }
+            return response()->json(['message' => 'Error deleting product'], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
     }
 }
