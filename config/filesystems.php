@@ -35,6 +35,7 @@ return [
             'root' => storage_path('app/private'),
             'serve' => true,
             'throw' => false,
+            'url' => config('app.url') . '/storage',
         ],
 
         'public' => [
@@ -72,6 +73,7 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('images') => storage_path('app/images'),
     ],
 
 ];
