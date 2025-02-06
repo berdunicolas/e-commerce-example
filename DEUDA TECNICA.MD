@@ -11,3 +11,8 @@
 - Refactorizar FETCH en js
 - Refactorizar tables o cambiar por datatables
 - Dark mode urgente
+- HasMedia, que admita colecciones de documentos y mejorar la configuracion de documento unico
+- Testing unitario
+- Arquitectura DDD
+- Manejo de excepciones 
+- Configuracion de idioma
