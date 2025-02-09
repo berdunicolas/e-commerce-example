@@ -16,3 +16,4 @@
 - Arquitectura DDD
 - Manejo de excepciones 
 - Configuracion de idioma
+- Arquitectura multi tenant para las tiendas
