@@ -5,7 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/admin', function () {
+Route::get('/', function () {
     return view('admin.dashboard');
 })->middleware('auth')->name('admin.dashboard');
 
