@@ -9,7 +9,7 @@
     <ul class="nav flex-column pt-5 font-size-2">
         <li class="nav-item mt-1">
             <a href="{{route('admin.dashboard')}}" class="nav-link text-dark btn btn-light rounded-0">
-                <i class="bi bi-house"></i>
+                <i class="bi bi-house-door"></i>
                 <span>Inicio</span>
             </a>
         </li>
