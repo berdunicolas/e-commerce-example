@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'business' => [
+            'driver' => 'sanctum',
+            'provider' => 'businesses',
+        ],
     ],
 
     /*
@@ -69,6 +73,10 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+        'businesses' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Business::class,
+        ],
     ],
 
     /*
