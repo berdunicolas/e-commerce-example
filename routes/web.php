@@ -25,14 +25,13 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
 // Rutas de tienda de libre acceso
 Route::get('/store', function () {
     return view('store');
-});
+})->name('store');
 
 Route::get('/cart', function () {
     return view('cart');
-});
+})->name('store.cart');
 
 require __DIR__.'/auth.php';

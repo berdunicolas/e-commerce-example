@@ -31,6 +31,12 @@
                 </ui>
             </ul>
         </li>
+        <li class="nav-item mt-1">
+            <a href="{{route('store')}}" target="_blank" class="nav-link text-dark btn btn-light rounded-0">
+                <i class="bi bi-shop"></i>
+                <span>Store</span>
+            </a>
+        </li>
     </ul>
     <ul class="nav flex-column mt-auto mb-4 font-size-2">
         <li class="nav-item">
