@@ -50,7 +50,7 @@
                         @csrf
                         <button  class="nav-link text-dark w-100 btn btn-light rounded-0">
                             <i class="bi bi-box-arrow-right"></i>
-                            <span>Cerrar sesion</span>
+                            <span>Cerrar sesión</span>
                         </button>
                     </form>
                 </ui>
