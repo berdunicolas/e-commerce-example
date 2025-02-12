@@ -18,3 +18,4 @@
 - Configuracion de idioma
 - Arquitectura multi tenant para las tiendas
 - Pasar enfoque de stores a businesses
+- Refactorizar para que lo "vendible" quepa todo en la misma tabla. Simplificar el polimorfismo con estructuras json en la misma tabla y columnas de datos comunes.
