@@ -13,9 +13,11 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="gradient-bg font-reg">
-        <div class="h-100 d-flex">
+        <div class="h-100 d-flex overflow-hidden">
             <x-nav-bar/>
-            {{ $slot }}
+            <div class="w-100 h-100 overflow-y-auto overflow-x-hidden"> {{-- GUARDAR FIX --}}
+                {{ $slot }}
+            </div>
         </div>
     </body>
 </html>

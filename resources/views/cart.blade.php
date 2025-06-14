@@ -15,86 +15,7 @@
                 <th></th>
               </th>
             </thead>
-            <tbody class="overflow-y-scroll" style="vertical-align: middle;">
-              <tr id="cart-item-1">
-                <td class="d-flex flex-row">
-                  <div class="">
-                    <img height="100" src="{{ asset('images/Image-not-found.png') }}" alt="Una remera">
-                  </div>
-                  <div class="">
-                    <strong style="font-family: 'Gothic A1' !important; font-weight: 700;">
-                      Pantalon
-                    </strong>
-                    <p>
-                      Pantalon deportivo sarasa sarasa
-                    </p>
-                  </div>
-                </td>
-                <td>
-                  <div class="input-group">
-                    <button class="btn border btn-light" onclick="CartController.subItemQuantity(1)" value="500" type="button">-</button>
-                    <input type="number" class="border bg-light" value="1" style="width: 2.5rem; text-align:right;" id="cart-item-q-1" disabled>
-                    <button class="btn border btn-light" onclick="CartController.addItemQuantity(1)" value="500" type="button">+</button>
-                  </div>
-                  <div class="form-text" id="basic-addon4">Solo 24 disponibles.</div>
-                </td>
-                <td>
-                  <strong style="font-family: 'Gothic A1' !important; font-weight: 700;">
-                    $<span id="cart-item-price-1">700</span>
-                  </strong>
-                  <div class="form-text" id="basic-addon4">$700 c/u.</div>
-                </td>
-                <td>
-                  <a href="javascript:;" onclick="CartController.deleteItem(1)" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" style="text-align: center; font-family: 'Gothic A1' !important; font-weight: 300;">
-                    <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                      </svg>
-                      <p>Eliminar</p>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-              <tr id="cart-item-2">
-                <td class="d-flex flex-row">
-                  <div class="">
-                    <img height="100" src="{{ asset('images/Image-not-found.png') }}" alt="Una remera">
-                  </div>
-                  <div class="">
-                    <strong style="font-family: 'Gothic A1' !important; font-weight: 700;">
-                      Remera
-                    </strong>
-                    <p>
-                      Remera deportiva sarasa sarasa
-                    </p>
-                  </div>
-                </td>
-                <td>
-                  <div class="input-group">
-                    <button class="btn border btn-light" onclick="CartController.subItemQuantity(2)" value="500" type="button">-</button>
-                    <input type="number" class="border bg-light" value="1" style="width: 2.5rem; text-align:right;" id="cart-item-q-2" disabled>
-                    <button class="btn border btn-light" onclick="CartController.addItemQuantity(2)" value="500" type="button">+</button>
-                  </div>
-                  <div class="form-text" id="basic-addon4">Solo 4 disponibles.</div>
-                </td>
-                <td>
-                  <strong style="font-family: 'Gothic A1' !important; font-weight: 700;">
-                    $<span id="cart-item-price-2">500</span>
-                  </strong>
-                  <div class="form-text" id="basic-addon4">$500 c/u.</div>
-                </td>
-                <td>
-                  <a href="javascript:;" onclick="CartController.deleteItem(2)" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" style="text-align: center; font-family: 'Gothic A1' !important; font-weight: 300;">
-                    <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                      </svg>
-                      <p>Eliminar</p>
-                    </div>
-                  </a>
-                </td>
-              </tr>
-            </tbody>
+            <tbody class="overflow-y-scroll" id="cart-body" style="vertical-align: middle;"></tbody>
           </table>
         </div>
       </div>
@@ -110,13 +31,13 @@
         <div class="card pt-2 pb-4 pe-3 ps-3">
           <ul class="list-group border-0">
             <li class="d-flex justify-content-between align-items-start pt-2 pe-0 pb-0 ps-0 border-0">
-              <p class="mb-0"><b>Precio total</b></p><p class="mb-0" id="summary-total-price">$10.000</p>
+              <p class="mb-0"><b>Precio total</b></p><p class="mb-0" id="summary-total-price">$10.000</p> <!-- ID summary-total-price -->
             </li>
             <li class="d-flex justify-content-between align-items-start pt-2 pe-0 pb-0 ps-0 border-0">
-              <p class="mb-0">Descuento</p><p class="mb-0" id="summary-discount">$10.000</p>
+              <p class="mb-0">Descuento</p><p class="mb-0" id="summary-discount">$10.000</p> <!-- ID sumamary-discount -->
             </li>
             <li class="d-flex justify-content-between align-items-start mt-3 pt-3 pe-0 pb-3 ps-0 border-top">
-              <p class="mb-0">Total</p><p class="mb-0" id="summary-total">$10.000</p>
+              <p class="mb-0">Total</p><p class="mb-0" id="summary-total">$10.000</p> <!-- summary-total -->
             </li>
           </ul>
           <button class="btn btn-dark mt-2" type="button">Ir a pagar</button>
@@ -134,27 +55,7 @@
       console.table(this);
     }
 
-    let itemsRows = [
-      {
-        id: 1,
-        price: 700,
-        quantity: 1,
-        purchaseLimitQuantity: 24,
-        rowElement: document.getElementById("cart-item-1"),
-        quantityElement: document.getElementById("cart-item-q-1"),
-        priceElement: document.getElementById("cart-item-price-1"),
-      },
-      {
-        id: 2,
-        price: 500,
-        quantity: 1,
-        purchaseLimitQuantity: 4,
-
-        rowElement: document.getElementById("cart-item-2"),
-        quantityElement: document.getElementById("cart-item-q-2"),
-        priceElement: document.getElementById("cart-item-price-2"),
-      },
-    ];
+    let itemsRows = [];
 
     let discount = {
       cuponCode: null,
@@ -173,19 +74,24 @@
     }
 
     class CartController {
-      static subItemQuantity(itemIndex){
+
+      static async subItemQuantity(itemIndex){
         let item = itemsRows.find(item => item.id === itemIndex);
 
+        
         if(item.quantity > 1){
           item.quantity--;
           item.quantityElement.value--;
-
+          
+          await this.substractFromCart(itemIndex);
           item.priceElement.textContent = item.quantity * item.price;
           this.orderSummary();
         }
       }
 
-      static addItemQuantity(itemIndex){
+      static async addItemQuantity(itemIndex){
+        await this.addToCart(itemIndex);
+
         let item = itemsRows.find(item => item.id === itemIndex);
 
         if(!item.purchaseLimitQuantity || !(item.quantity >= item.purchaseLimitQuantity)){
@@ -197,15 +103,28 @@
         }
       }
 
-      static deleteItem(itemIndex){
-        let item = itemsRows.find(item => item.id === itemIndex);
-        let indexToDelete = itemsRows.findIndex(item => item.id === itemIndex);
+      static async deleteItem(itemIndex){
+        try {
+          let item = itemsRows.find(item => item.id === itemIndex);
+          let indexToDelete = itemsRows.findIndex(item => item.id === itemIndex);
 
-        item.rowElement.remove();
-        if (indexToDelete !== -1) {
-          itemsRows.splice(indexToDelete, 1);
+          item.rowElement.remove();
+          if (indexToDelete !== -1) {
+            itemsRows.splice(indexToDelete, 1);
+          }
+
+          fetch('/api/cart/items/' + item.id, {
+            method: 'DELETE',
+            headers: {
+              'Authorization': 'Bearer 1|LXN0BmcnOujarNMt8kI22oOfE9U1ng9YFbIKCgjg1f962e8e',
+              'Accept': 'application/json',
+            },
+          });
+        } catch (error) {
+          console.error('Error: ', error);
         }
 
+        await this.getCart();
         this.orderSummary();
       }   
 
@@ -223,8 +142,164 @@
         orderSummary.total = orderSummary.totalPrice - orderSummary.discount;
         orderSummary.totalElement.textContent = orderSummary.total;                                                  
       }
-    }
+
+      static insertRow(itemId, itemName, itemDescription, itemPrice, itemQuantity, itemStock, itemUnit, itemImage){
+        const cartBody = document.getElementById('cart-body');
+        const tr = document.createElement('tr');
+        tr.setAttribute("id", "cart-item-" + itemId);
+
+        tr.innerHTML = `
+          <td class="d-flex flex-row">
+            <div class="">
+              <img height="100" src="${itemImage}" alt="">
+            </div>
+            <div class="">
+              <strong style="font-family: 'Gothic A1' !important; font-weight: 700;">${itemName}</strong>
+              <p>${itemDescription}</p>
+            </div>
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="btn border btn-light" onclick="CartController.subItemQuantity(${itemId})" value="${itemPrice}" type="button">-</button>
+              <input type="number" class="border bg-light" value="${itemQuantity}" style="width: 2.5rem; text-align:right;" id="cart-item-q-${itemId}" disabled>
+              <button class="btn border btn-light" onclick="CartController.addItemQuantity(${itemId})" value="${itemPrice}" type="button">+</button>
+            </div>
+            <div class="form-text" id="basic-addon4">${itemStock}${itemUnit} disponibles.</div>
+          </td>
+          <td>
+            <strong style="font-family: 'Gothic A1' !important; font-weight: 700;">
+              $<span id="cart-item-price-${itemId}">${itemPrice * itemQuantity}</span>
+            </strong>
+            <div class="form-text" id="basic-addon4">$${itemPrice} x ${itemUnit}.</div>
+          </td>
+          <td>
+            <a href="javascript:;" onclick="CartController.deleteItem(${itemId})" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" style="text-align: center; font-family: 'Gothic A1' !important; font-weight: 300;">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                </svg>
+                <p>Eliminar</p>
+              </div>
+            </a>
+          </td>`;
+        cartBody.appendChild(tr);
+
+      }
+
+      static async renderCartInfo(){
+        let cart = await this.getCart();
+
+        cart.items.forEach(item => {
+          this.insertRow(item.product.id, item.product.name, item.product.description, item.price, item.quantity, item.product.stock, item.product.unit, item.product.image_url);
+
+          itemsRows.push({
+            id: item.product.id,
+            price: item.price,
+            quantity: item.quantity,
+            purchaseLimitQuantity: item.stock,
+            rowElement: document.getElementById("cart-item-"+item.product.id),
+            quantityElement: document.getElementById("cart-item-q-"+item.product.id),
+            priceElement: document.getElementById("cart-item-price-"+item.product.id),
+          });
+        });
+      }
   
+      static async getCart(){
+        try {
+          let response = await fetch('/api/cart', {
+            method: 'GET',
+            headers: {
+              'Authorization': 'Bearer 1|LXN0BmcnOujarNMt8kI22oOfE9U1ng9YFbIKCgjg1f962e8e',
+              'Accept': 'application/json',
+            },
+          });
+
+          let data = await response.json();
+            
+          let cartIcon = document.getElementById('cart-icon');
+          if(data.items && data.items.length > 0){
+            
+            cartIcon.innerHTML = data.items.length;
+            cartIcon.classList.remove('visually-hidden');
+          }else{
+            cartIcon.classList.add('visually-hidden');
+          }
+
+          return data;
+        } catch (error) {
+          console.error('Error: ', error);
+          return null;
+        }
+        
+      }
+
+      static async addToCart(item_id){
+        const cart = await this.getCart();
+
+        const item = cart ? cart.items.find(item => item.product.id === item_id) : null;
+
+        const data = {
+          item_id: item_id,
+          quantity: item ? Number(item.quantity) + 1 : 1
+        };
+
+        fetch('/api/cart/items/add', {
+            method: 'PUT',
+            headers: {
+              'Authorization': 'Bearer 1|LXN0BmcnOujarNMt8kI22oOfE9U1ng9YFbIKCgjg1f962e8e',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+
+        }).then(async response => {
+            const statusCode = response.status;
+            const text = await response.text();
+            const data = text ? JSON.parse(text) : {};
+            return ({ statusCode, data });
+        }).then(({statusCode, data}) => {
+            if(statusCode === 201){
+              this.getCart();
+            } else {
+                console.error(data);
+            }
+        }).catch(error => console.error('Error:', error));
+      }
+
+      static async substractFromCart(item_id){
+        const cart = await this.getCart();
+
+        const item = cart ? cart.items.find(item => item.product.id === item_id) : null;
+
+        const data = {
+          item_id: item_id,
+          quantity: Number(item.quantity) - 1
+        };
+
+        fetch('/api/cart/items/add', {
+            method: 'PUT',
+            headers: {
+              'Authorization': 'Bearer 1|LXN0BmcnOujarNMt8kI22oOfE9U1ng9YFbIKCgjg1f962e8e',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+
+        }).then(async response => {
+            const statusCode = response.status;
+            const text = await response.text();
+            const data = text ? JSON.parse(text) : {};
+            return ({ statusCode, data });
+        }).then(({statusCode, data}) => {
+            if(statusCode === 201){
+              this.getCart();
+            } else {
+                console.error(data);
+            }
+        }).catch(error => console.error('Error:', error));
+      }
+    }
+
+    CartController.renderCartInfo();
+
   </script>
   <x-store-footer/>
 </x-store-layout>
