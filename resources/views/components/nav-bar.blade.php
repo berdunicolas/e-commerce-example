@@ -1,22 +1,20 @@
 <nav id="sidebar" class="bg-light sidebar d-flex flex-column text-dark">
     <div class="sidebar-toggler bg-light rounded-1" onclick="toggleSidebar(this)"><i class="bi bi-chevron-double-right"></i></div>
-    <div class="logo-sidebar py-4 d-flex align-items-center">
-        <x-logo/>
-        <span class="logo-text font-bold">
-         <x-product-name-logo/>
-        </span>
+    <div class="sidebar-logo py-4 d-flex align-items-center">
+        <img src="{{asset('images/facon-logo.svg')}}" class="logo" alt="facon logo">
+        <img src="{{asset('images/facon-minimalist-logo.svg')}}" class="minimalist-logo" alt="facon minimalist logo">
     </div>
     <ul class="nav flex-column pt-5 font-size-2">
         <li class="nav-item mt-1">
             <a href="{{route('admin.dashboard')}}" class="nav-link text-dark btn btn-light rounded-0">
-                <i class="bi bi-house"></i>
-                <span>Inicio</span>
+                <span class="nav-link-icon"><i class="bi bi-house"></i></span>
+                <span class="nav-link-text">Inicio</span>
             </a>
         </li>
         <li class="nav-item mt-1">
             <a href="#" class="nav-link text-dark btn btn-light rounded-0">
-                <i class="bi bi-box-seam"></i>
-                <span>Inventario</span>
+                <span class="nav-link-icon"><i class="bi bi-box-seam"></i></span>
+                <span class="nav-link-text">Inventario</span>
             </a>
             <ul class="font-size-1">
                 <ui class="nav-subordinate">
@@ -35,16 +33,16 @@
     <ul class="nav flex-column mt-auto mb-4 font-size-2">
         <li class="nav-item">
             <a href="" class="nav-link text-dark bg-cus-primary btn btn-light rounded-0">
-                <i class="">NB</i>
-                <span>Nicolás Berdú</span>
+                <span class="nav-link-icon"><i class="">NB</i></span>
+                <span class="nav-link-text">Nicolás Berdú</span>
             </a>
             <ul class="font-size-1">
                 <ui class="nav-subordinate">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button  class="nav-link text-dark w-100 btn btn-light rounded-0">
-                            <i class="bi bi-box-arrow-right"></i>
-                            <span>Cerrar sesion</span>
+                            <span class="nav-link-icon"><i class="bi bi-box-arrow-right"></i></span>
+                            <span class="nav-link-text">Cerrar sesion</span>
                         </button>
                     </form>
                 </ui>
@@ -60,6 +58,7 @@
         const minimalLogo = document.getElementById('minimal-logo');
 
         sidebar.classList.toggle('expanded');
+        localStorage.setItem('sidebar-expanded', sidebar.classList.contains('expanded'));
 
         toggle = toggle.children[0];
         if(toggle.classList.contains('bi-chevron-double-right')){
@@ -67,5 +66,12 @@
         }else{
             toggle.classList.replace('bi-chevron-double-left', 'bi-chevron-double-right');
         }
+    }
+
+    const sidebar = document.getElementById('sidebar'); 
+
+    // Restaurar estado
+    if (localStorage.getItem('sidebar-expanded') === 'true') {
+        sidebar.classList.add('expanded');
     }
 </script>
