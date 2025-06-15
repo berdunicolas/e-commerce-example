@@ -78,6 +78,7 @@ html, body {
 
 .sidebar.expanded {
     width: 250px; /* Ancho expandido */
+    min-width: 250px !important;
 }
 
 .sidebar .sidebar-logo{
@@ -155,6 +156,20 @@ html, body {
     justify-content: center;
     /*color: rgb(105, 0, 28);*/
     /*background: rgb(119, 166, 217);*/
+}
+
+.sidebar li a{
+  border-right: 2px rgba(105, 0, 28, 0);
+}
+.sidebar li.selected a{
+  border-right: solid 2px rgb(105, 0, 28);
+}
+
+.sidebar ui a{
+  border-right: 2px rgba(105, 0, 28, 0);
+}
+.sidebar ui.selected a{
+  border-right: solid 2px rgb(105, 0, 28);
 }
 
 .nav-subordinate {

@@ -5,16 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Facón') }} | Admin</title>
+        <title>{{$sectionName}} | {{ config('app.name', 'Facón') }}</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        @vite('resources/css/app.css')
+        @foreach ($cssSheets as $sheet)
+            @vite($sheet)
+        @endforeach
+
+        @vite('resources/js/app.js')
+        @foreach ($jsScripts as $script)
+            @vite($script)
+        @endforeach
     </head>
     <body class="gradient-bg font-reg">
         <div class="h-100 d-flex">
-            <x-nav-bar/>
+            <x-nav-bar :sectionId="$sectionId" />
             {{ $slot }}
         </div>
     </body>

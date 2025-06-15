@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout sectionId="products" sectionName="Productos">
     <main class="container flex-grow-1 p-4">
         <header class="p-5">
             <h5 class="display-5 header-section">Productos</h5>
