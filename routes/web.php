@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -22,6 +23,8 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('categories', CategoryController::class)->only(['index', 'show']);
     Route::resource('products', ProductController::class)->only(['index', 'show', 'store']);
+
+    Route::get('calendar', [CalendarController::class, 'index'])->name('calendar.index');
 });
 
 

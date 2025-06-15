@@ -29,6 +29,12 @@
                 </ui>
             </ul>
         </li>
+        <li class="nav-item mt-1">
+            <a href="{{route('calendar.index')}}" class="nav-link text-dark btn btn-light rounded-0">
+                <span class="nav-link-icon"><i class="bi bi-calendar2-week"></i></span>
+                <span class="nav-link-text">Calendario</span>
+            </a>
+        </li>
     </ul>
     <ul class="nav flex-column mt-auto mb-4 font-size-2">
         <li class="nav-item">
