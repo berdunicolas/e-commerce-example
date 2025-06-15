@@ -5,24 +5,24 @@
         <img src="{{asset('images/facon-minimalist-logo.svg')}}" class="minimalist-logo" alt="facon minimalist logo">
     </div>
     <ul class="nav flex-column pt-5 font-size-2">
-        <li class="nav-item mt-1">
+        <li class="nav-item mt-1 horizontal-red-gradient-bg {{$sectionId == 'home' ? 'selected' : ''}}">
             <a href="{{route('admin.dashboard')}}" class="nav-link text-dark btn btn-light rounded-0">
                 <span class="nav-link-icon"><i class="bi bi-house"></i></span>
                 <span class="nav-link-text">Inicio</span>
             </a>
         </li>
-        <li class="nav-item mt-1">
+        <li class="nav-item mt-1 {{$sectionId == 'inventory' ? 'selected' : ''}}">
             <a href="#" class="nav-link text-dark btn btn-light rounded-0">
                 <span class="nav-link-icon"><i class="bi bi-box-seam"></i></span>
                 <span class="nav-link-text">Inventario</span>
             </a>
             <ul class="font-size-1">
-                <ui class="nav-subordinate">
+                <ui class="nav-subordinate {{$sectionId == 'products' ? 'selected' : ''}}">
                     <a href="{{route('products.index')}}" class="nav-link text-dark btn btn-light rounded-0">
                         Productos
                     </a>
                 </ui>
-                <ui class="nav-subordinate">
+                <ui class="nav-subordinate {{$sectionId == 'categories' ? 'selected' : ''}}">
                     <a href="{{route('categories.index')}}" class="nav-link text-dark btn btn-light rounded-0">
                         Categorias
                     </a>
